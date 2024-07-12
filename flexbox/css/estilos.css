@@ -1,0 +1,106 @@
+.padre{
+  height: 1000px;
+  /* Para poder utilizar flexbox, le deberemos asignar la propiedad display:flex  al padre*/
+  display: flex;
+  /* flex-direction: row | row-reverse | column | column-reverse ;
+    Es la que se encargar de definir el eje principal y secundario de nuestro elementos hijos, al igual que la direccion de nuestros elementos.
+
+    Por defecto: la direccion de los elementos es row
+  */
+  flex-direction: row;
+
+  /* 
+  flex-wrap: nowrap | wrap | wrap-reverse
+
+  Por defecto flex, trata de disponer de los elementos en una misma línea, 
+  si no es el caso que necesitás, con flex-wrap podés ordenar los elementos 
+  en mas de una fila o columna. 
+  */
+  flex-wrap: wrap;
+
+  /*   flex-flow: column wrap;
+
+  La propiedad flex-flow, recibe dos parametros, primero la direccion de nuestros elementos (flex-direction),
+  y el segundo parametro es si nuestros elementos se ordenaran o no (flex-wrap).
+  Esta propiedad junta las prpiedades de flex-direction y flex-wrap.
+
+  flex-direction: column;   ----> flex-flow: column wrap;
+  flex-wrap: wrap;
+  */
+
+  /* justify-content: stretch | flex-start | flex-end | center | space-between | space-around | space-evenly ;
+
+  Cuando nombramos el eje principal de un elemento padre, es decir el eje 
+  horizontal, se destaca esta propiedad para dar direccionamiento a los 
+  elementos hijos.
+
+  */
+  justify-content: center;
+
+  /* align-items: flex-start | flex-end | center | stretch | baseline ;
+
+    Al igual que justify-content esta propiedad te permite distribuir los elementos en un eje, 
+    pero esta vez en el eje vertical.
+  */
+  align-items: center;
+
+  align-content: center;
+}
+.hijo{
+  width: 800px;
+  height: 100px;
+  background-color: cornflowerblue;
+  border: 1px solid black;
+  color: white;
+  text-align: center;
+}
+.hijo2{
+  order: 2;
+   flex-grow: 3;
+}
+.hijo3{
+  order:3;
+  flex-shrink: 0;
+}
+.hijo4{
+  order:1;
+  flex-basis: 100%;
+}
+
+/* Flex-grow
+
+Propiedad que se aplica a los hijos.
+Esta propiedad permite a una caja crecer cuando sobra espacio dentro del espacio "flex".
+El valor que le damos a flex-grow, es una proporcion; es decir la proporciona a partir
+de la cual se repartira el espacio sobrante.
+Su valor solo puede ser un número entero (no negativo).
+En flex-grow:x el numero x indica cuantas unidades crecerá el item para calcular su tamaño final. 
+Por ejemplo, flex-grow: 3 significa que el item crecerá 3 unidades.
+
+*/
+
+/* flex-shrink
+
+Por defecto todos los elementos tienen un "flex-shrink" de uno.
+Eso significa que cuando no hay espacio suficiente en un espacio "flex",
+todos los elementos se reducen proporcionalmente en base a uno.
+Con la propiedad flex-shrink se controla cómo se encogerán los elementos.
+
+NOTA: podras ver mejor el funcionamiento de flex-shrink, si haces pequeña la pantalla,
+ya sea modificando el tamaño de la ventana de tu navegador o utilizando el inspeccionador de codigo
+en la parte de responsive
+
+*/
+
+/* flex-basis
+
+Un elemento que tenga flex-basis, nos permite controlar tanto el ancho como 
+el alto de nuestros componentes, permitiéndonos hacer componentes flexibles 
+y fácilmente manejables tan solo cambiando el eje sobre el que queremos que actúe.
+
+El flex-basis, sera width cuando nuestro eje principal es el horizontal, 
+y sera height cuando nuestro eje principal es el vertical, 
+esto dependera de la direccion de nuestro espacio flex.
+
+*/
+
