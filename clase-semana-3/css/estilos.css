@@ -1,0 +1,85 @@
+.padre{
+  width: 100%;
+  height: 2000px;
+  background-color: brown;
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 100px;
+}
+.padre2{
+  width: 100%;
+  height: 2000px;
+  background-color: chartreuse;
+  position: relative;
+}
+.hijo{
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  background-color: aqua;
+  margin: 10px;
+  color: black;
+  border: 2px solid black;
+  clear: left;
+}
+.hijo2{
+  float: right;
+  width: 300px;
+  height: 200px;
+  clear: right;
+  text-align: center;
+  background-color:rebeccapurple;
+  margin: 10px;
+  color: black;
+  border: 2px solid black;
+}
+.hijo3,.hijo4,.hijo5,.hijo6{
+  width: 300px;
+  height: 200px;
+  background-color:rebeccapurple;
+  color: black;
+  border: 2px solid black;
+}
+.hijo3{
+  position: static;
+}
+.hijo4{
+  position: relative;
+  top: 20px;
+  left: 400px;
+  right: 40px;
+  bottom: 40px;
+}
+.hijo5{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  background-color:coral;
+  z-index: 100;
+}
+.hijo6{
+  position: fixed;
+  left: 600px;
+  top: 200px;
+}
+.padre3{
+  width: 100%;
+  height: 500px;
+  background-color: beige;
+}
+.madre1{
+  margin: auto;
+  width: 90%;
+}
+.hijo7{
+  display: inline-block;
+  width: 23%;
+  height: 200px;
+  background-color: burlywood;
+  text-align: center;
+  padding: 10px;
+}
